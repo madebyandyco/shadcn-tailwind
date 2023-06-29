@@ -25,3 +25,8 @@ Don't miss the Next.JS [starter projects](https://stackblitz.com/@GreenSockLearn
 ### Shadcn/UI
 
 A [beautifully designed set of components](https://ui.shadcn.com/docs) to copy and paste into your apps. Built upon Radix UI and easily styled with Tailwind CSS.
+
+## Live preview
+
+Have a play with the real thing...
+https://shadcn-tailwind.vercel.app/
