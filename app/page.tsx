@@ -11,7 +11,9 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
+// import { MoonIcon, SunIcon } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import { Mail } from 'lucide-react';
 
 //gsap
 import gsap from 'gsap';
@@ -59,10 +61,10 @@ export default function ModeToggle() {
 
   return (
     <main className="">
-      <div className="relative mb-[100vh] flex h-screen overflow-hidden">
+      <div className="relative flex h-screen overflow-hidden">
         <header className="fixed z-50 flex h-14 w-full items-center justify-end border-b border-black/20 bg-white/30 font-mono drop-shadow-xl backdrop-blur-xl dark:bg-zinc-500/20">
           <div className="container flex h-14 items-center">
-            <div className="mr-5 uppercase">Next.JS, GSAP, shadcn/UI & Tailwind demo</div>
+            <div className="mr-5 uppercase">Next.JS, Tailwind, GSAP & shadcn/UI</div>
             <div className="flex flex-1 items-center justify-end space-x-2">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
@@ -89,7 +91,7 @@ export default function ModeToggle() {
           <Image src="/greenery.jpg" fill={true} alt="background" className="object-cover" quality={30} priority />
         </div>
 
-        <div className="absolute top-[calc(100vh-300px)] z-[2]">
+        <div className="absolute top-[calc(100vh-160px)] z-[2]">
           <div ref={slider} className="relative whitespace-nowrap">
             <p ref={firstText} className="relative font-inter text-[10rem] text-zinc-100 dark:text-[#e4ff02]">
               GSAP, shadcn & Tailwind, oh my!&nbsp;&nbsp;
@@ -102,6 +104,35 @@ export default function ModeToggle() {
       </div>
 
       <footer className="container relative bottom-0 w-full py-10">
+        <div className="mb-10 flex flex-col space-y-3 sm:flex-row sm:gap-5 sm:space-y-0">
+          <Button size="lg">Primary Large</Button>
+          <Button>Primary Medium</Button>
+          <Button size="sm">Primary Small</Button>
+        </div>
+
+        <div className="mb-10 flex flex-col space-y-3 sm:flex-row sm:gap-5 sm:space-y-0">
+          <Button variant="secondary">Secondary</Button>
+        </div>
+
+        <div className="mb-10 flex flex-col space-y-3 sm:flex-row sm:gap-5 sm:space-y-0">
+          <Button variant="special">Special</Button>
+        </div>
+
+        <div className="mb-10 flex flex-col space-y-3 sm:flex-row sm:gap-5 sm:space-y-0">
+          <Button variant="outline">Outline</Button>
+        </div>
+
+        <div className="mb-10 flex flex-col space-y-3 sm:flex-row sm:gap-5 sm:space-y-0">
+          <Button variant="ghost">Ghost</Button>
+        </div>
+
+        <div className="mb-[50vh] flex flex-col space-y-3 sm:flex-row sm:gap-5 sm:space-y-0">
+          <Button>
+            <Mail className="mr-2 h-4 w-4" />
+            Icon
+          </Button>
+        </div>
+
         <p className="relative flex w-full items-center font-mono text-black dark:text-white">
           Demo:&nbsp;
           <Link href={'https://madebyandy.co'} className="group  relative ease-out">

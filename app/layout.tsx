@@ -11,13 +11,10 @@ const inter = Inter({
 const mono = Roboto_Mono({
   subsets: ['latin'],
   display: 'swap',
-  // weight: ['400'],
   variable: '--font-mono',
 });
-
-import '../styles/styles.css';
-//
 import { ThemeProvider } from '@/components/theme-provider';
+import '../styles/styles.css';
 
 const metadata = {
   title: 'Next.JS | Tailwind | ShadcnUI',
