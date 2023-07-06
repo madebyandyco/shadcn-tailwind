@@ -13,12 +13,13 @@ const mono = Roboto_Mono({
   display: 'swap',
   variable: '--font-mono',
 });
+
 import { ThemeProvider } from '@/components/theme-provider';
 import '../styles/styles.css';
 
 const metadata = {
-  title: 'Next.JS | Tailwind | ShadcnUI',
-  description: 'Next.JS demo with darkmode',
+  title: 'Next.JS | Tailwind | ShadcnUI | CVA',
+  description: 'Implement darkmode in Next.JS',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

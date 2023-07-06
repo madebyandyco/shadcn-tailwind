@@ -1,10 +1,8 @@
 /* defaults */
 body {
   margin: 0;
-  /* font-family: 'inter'; */
-  /* font-weight: 400; */
   font-size: 1rem;
-  @apply leading-[1.5rem]  font-semibold;
+  @apply font-semibold  leading-[1.5rem];
 }
 ::selection {
   background-color: #efff00;

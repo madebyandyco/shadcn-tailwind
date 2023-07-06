@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { useRef, useEffect } from 'react';
+import { useRef, useLayoutEffect } from 'react';
 
 // next.js
 import Image from 'next/image';
@@ -10,10 +10,8 @@ import Link from 'next/link';
 // shadcn/ui
 import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
-// import { MoonIcon, SunIcon } from 'lucide-react';
+import { MoonIcon, SunIcon, MailIcon } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import { Mail } from 'lucide-react';
 
 //gsap
 import gsap from 'gsap';
@@ -29,7 +27,7 @@ export default function ModeToggle() {
   let xPercent = 0;
   let scrollDirection = -1;
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(slider.current, {
       scrollTrigger: {
@@ -62,7 +60,7 @@ export default function ModeToggle() {
   return (
     <main className="">
       <div className="relative flex h-screen overflow-hidden">
-        <header className="fixed z-50 flex h-14 w-full items-center justify-end border-b border-black/20 bg-white/30 font-mono drop-shadow-xl backdrop-blur-xl dark:bg-zinc-500/20">
+        <header className="drop-shadow-xl fixed z-50 flex h-14 w-full items-center justify-end border-b border-black/20 bg-white/50 font-mono backdrop-blur-xl dark:bg-zinc-500/20">
           <div className="container flex h-14 items-center">
             <div className="mr-5 uppercase">Next.JS, Tailwind, GSAP & shadcn/UI</div>
             <div className="flex flex-1 items-center justify-end space-x-2">
@@ -126,10 +124,19 @@ export default function ModeToggle() {
           <Button variant="ghost">Ghost</Button>
         </div>
 
-        <div className="mb-[50vh] flex flex-col space-y-3 sm:flex-row sm:gap-5 sm:space-y-0">
+        <div className="mb-10 flex flex-col space-y-3 sm:flex-row sm:gap-5 sm:space-y-0">
           <Button>
-            <Mail className="mr-2 h-4 w-4" />
+            <MailIcon className="mr-2 h-4 w-4" />
             Icon
+          </Button>
+        </div>
+
+        <div className="mb-[50vh] flex flex-col space-y-3 sm:flex-row sm:gap-5 sm:space-y-0">
+          <Button variant="brutal" size="lg">
+            Brutalist
+          </Button>
+          <Button variant="brutal" size="sm">
+            Smol Brutal
           </Button>
         </div>
 
