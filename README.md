@@ -18,7 +18,7 @@ If you are struggling to get Google fonts working with Next.JS and Tailwind, [he
 
 ### GSAP
 
-The [GASP documentation](https://greensock.com/docs/v3) is amongst the best available.
+The [GSAP documentation](https://greensock.com/docs/v3) is amongst the best available.
 
 Don't miss the Next.JS [starter projects](https://stackblitz.com/@GreenSockLearning/collections/gsap-nextjs-starters) here.
 
